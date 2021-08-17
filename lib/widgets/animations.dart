@@ -3,7 +3,7 @@ import 'dart:math' show Random;
 import 'package:flutter/material.dart';
 import 'package:rive/rive.dart';
 
-enum AppAnimationType { planet, hand, painting, zombie, matt }
+enum AppAnimationType { planet, hand, painting, zombie }
 
 class AppAnimation extends StatelessWidget {
   const AppAnimation({Key? key, required this.type, this.fit})
@@ -21,8 +21,6 @@ class AppAnimation extends StatelessWidget {
         return 'assets/blue-planet.riv';
       case AppAnimationType.zombie:
         return 'assets/zombie.riv';
-      case AppAnimationType.matt:
-        return 'assets/matt.riv';
       default:
         return 'assets/zombie.riv';
     }
@@ -38,8 +36,6 @@ class AppAnimation extends StatelessWidget {
         return 'rotation';
       case AppAnimationType.zombie:
         return 'Walk';
-      case AppAnimationType.matt:
-        return 'driving';
       default:
         return 'idle';
     }

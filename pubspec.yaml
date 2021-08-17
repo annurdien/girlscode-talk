@@ -51,7 +51,8 @@ flutter:
     - assets/hand.riv
     - assets/painting.riv
     - assets/zombie.riv
-    - assets/matt.riv
+    - assets/house.riv
+    - assets/skills.riv
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

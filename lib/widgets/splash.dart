@@ -1,6 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:girlscode_example/widgets/animations.dart';
+import 'package:girlscode_example/widgets/skills.dart';
 import 'package:girlscode_example/widgets/theme.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -9,7 +10,7 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: paintingBackground,
+      backgroundColor: zombieBackground,
       body: Column(
         children: [
           Flexible(
@@ -20,7 +21,7 @@ class SplashScreen extends StatelessWidget {
             ),
           ),
           Flexible(
-            flex: 4,
+            flex: 2,
             child: AnimatedTextKit(
               animatedTexts: [
                 WavyAnimatedText(
@@ -34,6 +35,16 @@ class SplashScreen extends StatelessWidget {
               isRepeatingAnimation: true,
               repeatForever: true,
             ),
+          ),
+          SizedBox(
+            height: 200,
+          ),
+          ElevatedButton(
+            child: Text("Continue"),
+            onPressed: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => StateMachineSkills()));
+            },
           )
         ],
       ),
