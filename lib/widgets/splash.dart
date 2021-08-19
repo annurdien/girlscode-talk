@@ -4,6 +4,8 @@ import 'package:girlscode_example/widgets/animations.dart';
 import 'package:girlscode_example/widgets/skills.dart';
 import 'package:girlscode_example/widgets/theme.dart';
 
+import 'counter.dart';
+
 class SplashScreen extends StatelessWidget {
   const SplashScreen({Key? key}) : super(key: key);
 
@@ -13,6 +15,8 @@ class SplashScreen extends StatelessWidget {
       backgroundColor: zombieBackground,
       body: Column(
         children: [
+          //Animasi zombie
+          //Menggunakan Rive
           Flexible(
             flex: 8,
             child: AppAnimation(
@@ -20,6 +24,9 @@ class SplashScreen extends StatelessWidget {
               fit: BoxFit.contain,
             ),
           ),
+
+          // Teks Loading animated
+          // Menggunakan library AnimatedTextKit
           Flexible(
             flex: 2,
             child: AnimatedTextKit(
@@ -39,13 +46,34 @@ class SplashScreen extends StatelessWidget {
           SizedBox(
             height: 200,
           ),
-          ElevatedButton(
-            child: Text("Continue"),
-            onPressed: () {
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => StateMachineSkills()));
-            },
-          )
+          //Button di bawah loading animation
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ElevatedButton(
+                child: Text("Animation"),
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => StateMachineSkills(),
+                    ),
+                  );
+                },
+              ),
+              ElevatedButton(
+                child: Text("Counter"),
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => CounterPage(
+                        title: "Counter Page",
+                      ),
+                    ),
+                  );
+                },
+              ),
+            ],
+          ),
         ],
       ),
     );

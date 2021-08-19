@@ -10,9 +10,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter Demo Apps',
       theme: appTheme,
-      // home: CounterPage(title: 'Flutter Demo Home Page'),
       home: SplashScreen(),
     );
   }
