@@ -60,6 +60,9 @@ class SplashScreen extends StatelessWidget {
                   );
                 },
               ),
+              SizedBox(
+                width: 50,
+              ),
               ElevatedButton(
                 child: Text("Counter"),
                 onPressed: () {

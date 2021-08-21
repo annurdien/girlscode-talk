@@ -10,13 +10,13 @@ const paintingBackground = Color(0xff412047);
 
 final appBarTheme = AppBarTheme(
   elevation: 0,
-  color: berlinBrightYellow,
+  color: Colors.red,
 );
 
 final appTheme = ThemeData(
   brightness: Brightness.light,
-  primaryColor: berlinBrightYellow,
-  accentColor: berlinDarkYellow,
+  primaryColor: Colors.red,
+  accentColor: Colors.redAccent,
   appBarTheme: appBarTheme,
   fontFamily: 'Montserrat',
   textTheme: TextTheme(

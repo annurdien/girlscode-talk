@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:girlscode_example/widgets/counter.dart';
 import 'package:girlscode_example/widgets/splash.dart';
 import 'package:girlscode_example/widgets/theme.dart';
 
@@ -12,7 +13,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo Apps',
       theme: appTheme,
-      home: SplashScreen(),
+      home: CounterPage(
+        title: "Example APP",
+      ),
     );
   }
 }
