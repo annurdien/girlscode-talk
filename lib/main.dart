@@ -13,9 +13,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo Apps',
       theme: appTheme,
-      home: CounterPage(
-        title: "Example APP",
-      ),
+      // home: CounterPage(
+      //   title: "Example APP",
+      // ),
+      home: SplashScreen(),
     );
   }
 }

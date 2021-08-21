@@ -13,24 +13,30 @@ class _CounterPageState extends State<CounterPage> {
   int _counter = 0;
 
   void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
+    setState(() => _counter++);
+  }
+
+  void _decrementCounter() {
+    setState(() => _counter--);
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text("Girls Kode"),
       ),
       body: Center(
+        //
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            // Widget
             Text(
               'Anda sudah menekan tombol ini sebanyak:',
+              style: Theme.of(context).textTheme.headline6,
             ),
+            //Widget
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
@@ -38,10 +44,23 @@ class _CounterPageState extends State<CounterPage> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
+      floatingActionButton: Row(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          FloatingActionButton(
+            tooltip: 'Increment',
+            onPressed: _decrementCounter,
+            child: Icon(Icons.remove),
+          ),
+          SizedBox(
+            width: 10,
+          ),
+          FloatingActionButton(
+            onPressed: _incrementCounter,
+            tooltip: 'Increment',
+            child: Icon(Icons.add),
+          ),
+        ],
       ),
     );
   }

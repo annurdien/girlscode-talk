@@ -32,7 +32,7 @@ class SplashScreen extends StatelessWidget {
             child: AnimatedTextKit(
               animatedTexts: [
                 WavyAnimatedText(
-                  'Loading...',
+                  'Girls Kode...',
                   textStyle: Theme.of(context)
                       .textTheme
                       .headline4!
